@@ -11,15 +11,26 @@
 body {
     margin: 0;
     padding: 0;
+    font-family: Roboto-regular, sans-serif;
+    line-height: 20px;
 }
-
 
 #wrapper {
     width: 100%;
+    background-color: rgba(255,213,84,0.1)
 }
 
 #current {
-    text-align: center
+    text-align: center;
+}
+
+#sun {
+    width: 25px;
+}
+
+#logo {
+    width: 60px;
+    margin: 10px;
 }
 
 #temps,
@@ -33,6 +44,7 @@ body {
 }
 
 #temps {
+    background-color: #ffd554;
     border-top: black solid 2px;
     border-bottom: black solid 2px;
 }
@@ -50,6 +62,17 @@ body {
     text-align: center;
 }
 
+#wind {
+    padding-bottom: 100px;
+    border-bottom: black solid 2px;
+}
+
+#location>li {
+    width: 30%;
+    display: inline-block;
+    text-align: center;
+}
+
 
 /*VisitorAnalysis page*/
 
@@ -60,10 +83,12 @@ body {
     padding: 20px;
 }
 
+/*
 p {
     margin-left: 20px;
     width: 40%;
 }
+*/
 
 #heritage {
     width: 300px;
