@@ -135,9 +135,7 @@ h1 {
         display: inline-block;
         padding: 10px;
     }
-    #selectedCity {
-        border: black solid 1px;
-    }
+
     #wind {
         padding-top: 60px;
         border-top: black solid 2px;
