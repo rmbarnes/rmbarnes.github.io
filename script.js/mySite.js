@@ -32,12 +32,16 @@ $(function () {
 
                 $("title").text(data.current_observation.display_location.full + " | Weather Home");
 
-                $("#currentTemp").text(Math.round(data.current_observation.temp_f) + "\xB0" + "F");
+                $("#currentTemp").html("Current " + Math.round(data.current_observation.temp_f) + "\xB0" + "F");
 
-                $("#summary").text(data.current_observation.weather);
-                $("#add1").text("Wind Chill: " + data.current_observation.windchill_string);
-                $("#add2").text("Wind Direction: " + data.current_observation.wind_dir);
-                $("#add3").text("Temp feels like: " + data.current_observation.feelslike_f + "\xB0" + "F");
+                $(".summary").text("Current Condition: " + data.current_observation.weather);
+                $(".add1").text("Precipitation: " + data.current_observation.precip_today_in);
+                $("#add2").text("Wind Speed: " + data.current_observation.wind_mph + " mph");
+                $("#add3").text("Wind Direction: " + data.current_observation.wind_dir);
+                $("#longitude").text("Longitude: " + data.current_observation.display_location.longitude);
+                $("#latitude").text("Longitude: " + data.current_observation.display_location.latitude);
+                $("#zip").text("Zip: " + data.current_observation.display_location.zip);
+
 
                 $("#cover").fadeOut(250);
 
