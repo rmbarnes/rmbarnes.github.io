@@ -1,6 +1,6 @@
 jQuery(document).ready(function ($) {
     $.ajax({
-        url: "http://api.wunderground.com/api/7f040ad384cf4dfb/forecast/geolookup/conditions/q/SC/Greenville.json",
+        url: "https://api.wunderground.com/api/7f040ad384cf4dfb/forecast/geolookup/conditions/q/SC/Greenville.json",
         dataType: "jsonp",
         success: function (data) {
             var location = data['Greenville']['city'];
