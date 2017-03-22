@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <meta charset="utf-8">
+    <title>Another practice page :)</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <script>
+        function doThis() {
+            var canvas = document.getElementById("coolCanvas");
+            var context = canvas.getContext("2d");
+
+            var berry = document.getElementById("berry");
+
+            context.drawImage(berry, 50, 50, 160, 106.5);
+
+            context.fillText("I love me some berries!", 20, 20);
+
+            berry.style.opacity = 1;
+
+        }
+
+        function click() {
+            var berry = document.getElementById("berry");
+
+            berry.style.opacity = 1;
+            berry.border = "black 1px solid";
+        }
+    </script>
+</head>
+
+<body onload="doThis()">
+
+    <canvas id="coolCanvas" width="300" height="300">
+        I hope you don't see this message!
+    </canvas>
+
+    <img onclick="click()" id="berry" src="photos/strawberries.jpg">
+</body>
+
+
+</html>

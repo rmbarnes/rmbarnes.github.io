@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <meta charset="utf-8">
+    <title>A third practice</title>
+    <script>
+        function doIt() {
+            var canvas = document.getElementById("thisCanvas");
+            var thisContext = canvas.getContext("2d");
+            console.log(thisContext);
+
+            //here is some CSS on the canvas.. but not the context?
+            canvas.style.border = "purple dotted 4px";
+            thisContext.fillStyle = "red";
+            thisContext.fillRect(3, 3, 140, 150);
+
+
+        }
+    </script>
+</head>
+
+<body onload="doIt()">
+
+    <canvas id="thisCanvas" width="400" height="300"></canvas>
+    <canvas id="thatCanvas" width="300" height="200"></canvas>
+</body>
+
+</html>

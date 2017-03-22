@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Project 2</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <script>
+
+        function generateGame() {
+            var photos = new XMLHttpRequest();
+            photos.open("get", "stuff.json", "true");
+
+
+            photos.onreadystatechange = function () {
+                if (photos.readyState == 4 && photos.status == 200) {
+                    var picsString = photos.responseText;
+                    var pictures = JSON.parse(picsString);
+                    generateBoard(pictures);
+                }
+            }
+            photos.send();
+
+
+        }
+        function generateBoard(thePictures) {
+            var stuff = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19];
+            var gameBoard = document.getElementById("gameBoard");
+            stuff.sort(function(a, b){
+                return 0.5 - Math.random()
+            })
+            for (i = 0; i < stuff.length; i++) {
+                var pictureNo = stuff[i] % 10;
+                var container = generateCard(thePictures[pictureNo]);
+                gameBoard.appendChild(container);
+            }
+
+
+        }
+
+        function generateCard(thePicture) {
+            var aContainer = document.createElement("div");
+            aContainer.className = "container";
+
+            var aCard = document.createElement("div");
+            aCard.className = "card";
+            aCard.onclick = flipIt;
+            aCard.flipped = false;
+            aContainer.appendChild(aCard);
+
+            var front = document.createElement("canvas");
+            front.className = "front";
+            aCard.appendChild(front);
+
+            var back = document.createElement("img");
+            back.className = "back";
+            back.src = thePicture;
+            aCard.appendChild(back);
+
+            return aContainer;
+
+        }
+
+
+
+        function flipIt(event) {
+
+            var theCard = event.target.parentNode;
+            var rotateString = "rotateY(180deg)";
+            if (theCard.flipped) {
+                rotateString = "rotateY(0deg)";
+            }
+
+            theCard.style.transform = rotateString;
+
+            theCard.flipped = !theCard.flipped;
+
+
+        }
+
+
+
+    </script>
+
+</head>
+
+
+<body onload="generateGame()">
+    <div id="wrapper">
+
+        <header>
+            <h1>Memory Game</h1>
+        </header>
+
+        <main>
+
+            <section id="gameBoard">
+            </section>
+
+
+        </main>
+    </div>
+
+</body>
+
+</html>

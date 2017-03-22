@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script>
+
+        var picFlipped = false;
+        function doThis() {
+
+
+            var pic = document.getElementById("practicePic");
+
+            var rotate = "rotateY(180deg)";
+            if (picFlipped) {
+                rotate = "rotateY(0deg)";
+            }
+            pic.style.transform = rotate;
+
+            picFlipped = !picFlipped;
+
+
+        }
+
+        var turned = false;
+
+        function doThat() {
+             var photo = document.getElementById("practice2");
+
+            var change = "rotateZ(34deg)"
+            if (turned) {
+                change = "rotateZ(0deg)";
+            }
+
+            photo.style.transform = change;
+
+            turned = !turned;
+
+        }
+    </script>
+
+</head>
+
+<body>
+    <h1>This is a practice page for turning images</h1>
+
+    <img onclick="doThis()" id="practicePic" src="hikePic.jpg">
+
+    <img onclick="doThat()" id="practice2" src="hikePic.jpg">
+
+</body>
+
+
+</html>

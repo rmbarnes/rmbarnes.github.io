@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <meta charset="utf">
+    <title>Canvas Practice</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <script>
+        function title() {
+            var title = document.createElement("h1");
+            var text = document.createTextNode("This is my canvas app. We draw pictures here");
+            title.appendChild(text);
+            document.body.prepend(title);
+        }
+
+
+        window.addEventListener("load", drawImage, false);
+
+        function drawImage() {
+
+            var canvas = document.getElementById("canvas");
+            var context = canvas.getContext("2d");
+
+
+            context.fillText("An apple a day keeps the doctor away...", 70, 150);
+
+            var image = document.getElementById("applePic");
+
+            var anotherImage = document.getElementById("paprika");
+            context.drawImage(anotherImage, 70, 190, 160, 106.5)
+
+            context.drawImage(image, 2, 2, 160, 106.5);
+
+
+        }
+    </script>
+</head>
+
+<body onload = "title()">
+
+    <canvas id="canvas" class="canvas" width="300" height="300">
+        You're out of luck. Your browser does not support Canvas.
+    </canvas>
+
+    <img id="applePic" src="photos/apple.jpg">
+    <img id="paprika" src="photos/pepper.jpg">
+</body>
+
+</html>
