@@ -4,8 +4,8 @@ h1 {
 }
 
 .container {
-    width: 130px;
-    height: 100px;
+    width: 160px;
+    height: 105px;
     perspective: 400;
     float: left;
     margin: 10px;
