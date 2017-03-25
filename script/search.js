@@ -5,7 +5,7 @@ $('#myQuery').keyup(function() {
 
 
 
-    $.getJSON("http://autocomplete.wunderground.com/aq?query=" + value + "&cb=?", function (data) {
+    $.getJSON("https://autocomplete.wunderground.com/aq?query=" + value + "&cb=?", function (data) {
         console.log(data);
 
         //Begin building output
