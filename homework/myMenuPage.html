@@ -3,15 +3,17 @@
 
     <head>
         <meta charset="utf-8">
-        <title>Weather</title>
+        <title id="title">Weather</title>
         <link rel="stylesheet" type="text/css" href="../styles/styleFile.css" media="screen">
         <meta name="viewport" content="width=device-width">
+
+
     </head>
     <!-- *********************************************
 * Who Did You Collaborate With On This Assessment?
 * 1. Rachel Barnes
-* 2. Benjamin Poore
-* 3. James Warner
+* 2. James Warner
+* 3.
 * 4.
 * 5.
 * ******************************************** -->
@@ -19,18 +21,18 @@
     <body>
         <div id="wrapper">
             <header id="pageHeader">
-                <nav>
+                <nav id="page-nav">
 
                     <ul>
-                        <li><a target="_blank" href="franklin.html" title="visit the franklin weather page for up-to-date weather and forecast information">Franklin, ID</a></li>
-                        <li><a>Springfield, IL</a></li>
-                        <li><a target="_blank" href="greenville.html">Greenville, SC</a></li>
+                        <li><a target="_blank" href="franklin.html" title="visit the franklin weather page for up-to-date weather and forecast information">Franklin</a></li>
+                        <li><a href="index.html">Springfield</a></li>
+                        <li><a target="_blank" href="greenville.html">Greenville</a></li>
                     </ul>
                 </nav>
 
                 <img id="logo" src="https://openclipart.org/image/2400px/svg_to_png/1500/spite-sun-snow.png" alt="temporary logo for this awesome weather page">
                 <ul id="cities">
-                    <li><h1 id="cityDisplay">Current Location</h1></li>
+                    <li><h1 id="cityDisplays">Current Location</h1></li>
                 </ul>
 
 
@@ -38,9 +40,9 @@
             <main>
 
                 <ul id="temps">
-                    <li id="currentTemp">Loading...</li>
-                    <li>High 90&deg;<sup>F</sup>
-                        <br>Low 66&deg;<sup>F</sup></li>
+                    <li id="currentT">Loading...</li>
+                    <li>High &deg;<sup>F</sup>
+                        <br>Low &deg;<sup>F</sup></li>
                 </ul>
                 <ul id="conditions">
                     <li class="sunni summary"><img id="sun" src="https://openclipart.org/image/2400px/svg_to_png/27381/ernes-Sun-Sole.png" alt="sunny skies in the forecast for Springfied, IL, presented by this weather website"> </li>
@@ -136,7 +138,7 @@
 
         </div>
         <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
-        <script src="/script/mySite.js"></script>
+        <script src="/script/menuBuilding.js"></script>
     </body>
 
 </html>
