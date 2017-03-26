@@ -45,8 +45,6 @@ function getData(input) {
 
 
             $(".summary").text("Current Condition: " + data.current_observation.weather);
-            $(".highT").text("High: " + data.current_observation.temp_high.normal.F + '°');
-            $(".lowT").text("Low: " + data.current_observation.temp_low.normal.F + '°');
             $(".add1").text("Precipitation: " + data.current_observation.precip_today_in + "%");
             $("#add2").text("Wind Speed: " + data.current_observation.wind_mph + " mph");
             $("#add3").text("Wind Direction: " + data.current_observation.wind_dir);
