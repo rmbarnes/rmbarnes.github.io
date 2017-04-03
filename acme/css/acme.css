@@ -1,0 +1,160 @@
+* {
+    box-sizing: border-box;
+}
+
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    line-height: 20px;
+    background-image: url(/acme/images/site/background.jpg);
+    font-family: "Comic Sans MS", cursive, sans-serif;
+}
+
+.wrapper {
+    max-width: 100%;
+    margin: 15px;
+    padding: 10px;
+    background-color: white;
+}
+#productContent {
+    display: none;
+}
+
+/*Page Nav styles*/
+
+.pageNav {
+    background-color: #de2226;
+    left: 0;
+    width: 100%;
+    padding: 0;
+}
+
+.pageNav ul {
+    display: flex;
+    height: 4em;
+    padding: 0;
+    list-style: none;
+}
+
+.pageNav li {
+    flex: 1;
+    display: flex;
+}
+
+.pageNav a {
+    text-decoration: none;
+    color: #fff;
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+
+}
+.pageNav a:hover {
+    background-color: white;
+    color: #de2226;
+}
+
+/*Home Content*/
+.homeContent {
+    background-image: url(/acme/images/site/feature.jpg);
+    background-size: 100%;
+    background-height: 100%;
+    background-repeat: no-repeat;
+    max-width: 100%;
+    margin: 10px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+
+
+#heroDescr, #recipe {
+    list-style: none;
+}
+
+
+#recipeBox, #prodRevBox {
+    flex-wrap: wrap;
+}
+
+#recipe {
+    width: 100%;
+    display: flex;
+    height: 200px;
+    flex-wrap: wrap;
+    text-align: center;
+    padding: 0;
+}
+
+#recipe li {
+    width: 50%;
+    height: 100px;
+
+
+}
+
+/*Other pages*/
+#productContent {
+    display: flex;
+}
+
+#productPic {
+    max-width: 40%;
+}
+
+
+#price {
+    color: #de2226;
+    font-size: 1.5em;
+}
+
+#details {
+    width: 50%;
+
+}
+
+
+/*Footer Styles*/
+.pageFooter {
+    font-size: .75em;
+    border-top: black solid 3px;
+    margin-top: 0px;
+    padding: 0 .5em;
+}
+
+.pageFooter p {
+    margin: 0px;
+    text-align: center
+
+}
+
+h1 {
+/*    font-size: 1.2em;*/
+}
+
+#logo {
+}
+
+.medium-screen,
+.large-screen,
+#roadPic {
+    display: none;
+}
+
+@media screen and (min-width: 600px) {
+    #bottomHalf {
+        display:flex;
+        flex-direction: row-reverse;
+    }
+
+
+
+@media screen and (min-width: 1024px) {
+
+}
