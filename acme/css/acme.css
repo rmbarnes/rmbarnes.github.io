@@ -10,7 +10,7 @@
 body {
     margin: 0;
     padding: 0;
-    line-height: 20px;
+    line-height: 25px;
     background-image: url(/acme/images/site/background.jpg);
     font-family: "Comic Sans MS", cursive, sans-serif;
 }
@@ -121,11 +121,6 @@ body {
 #productContent {
     display: flex;
     flex-direction: column;
-}
-
-#prodInfo {
-    display: flex;
-    justify-content: space-around;
 
 }
 
@@ -140,8 +135,8 @@ body {
 }
 
 #details {
-    width: 50%;
-
+    max-width: 375px;
+    margin-top: 50px;
 
 }
 
@@ -174,15 +169,25 @@ h1 {
 }
 
 @media screen and (min-width: 600px) {
+
     #bottomHalf {
         display:flex;
         flex-direction: row-reverse;
     }
 
     #productPic img{
-        max-width: 100%;
+        max-width: 75%;
     }
+    #prodInfo {
+        display: flex;
+        justify-content: center;
 
+    }
+    #details {
+        margin-top: 0px;
+
+    }
+}
 
 
 @media screen and (min-width: 1024px) {
