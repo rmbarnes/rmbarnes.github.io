@@ -18,7 +18,7 @@ body {
 .wrapper {
     max-width: 100%;
     margin: 15px;
-    padding: 10px;
+    margin-top: 0;
     background-color: white;
 }
 #productContent {
@@ -29,9 +29,6 @@ body {
 
 .pageNav {
     background-color: #de2226;
-    left: 0;
-    width: 100%;
-    padding: 0;
 }
 
 .pageNav ul {
@@ -77,6 +74,11 @@ body {
     display: flex;
 
 }
+
+h1, h2 {
+    margin-left: 10px;
+
+}
 #heroFigure {
    margin: 0;
 }
@@ -84,11 +86,16 @@ body {
     max-width: 100%;
     margin: 0;
     padding: 0;
+    position: relative;
 
 }
 
 #heroDescr {
-    width: 300px;
+    color: #990033;
+    font-size: .75em;
+    width: 50%;
+    position: absolute;
+    right: 5%;
 
 }
 
@@ -117,6 +124,10 @@ body {
 
 }
 
+#logo {
+    margin-top: 10px;
+    margin-left: 10px;
+}
 /*Other pages*/
 #productContent {
     display: flex;
@@ -151,30 +162,21 @@ body {
 
 .pageFooter p {
     margin: 0px;
-    text-align: center
+    text-align: center;
 
 }
 
-h1 {
-/*    font-size: 1.2em;*/
-}
-
-#logo {
-}
-
-.medium-screen,
-.large-screen,
-#roadPic {
-    display: none;
-}
 
 @media screen and (min-width: 600px) {
 
-    #bottomHalf {
-        display:flex;
-        flex-direction: row-reverse;
+
+    #heroDescr {
+        font-size: 1em;
     }
 
+    #recipeBox {
+        width: 400px;
+    }
     #productPic img{
         max-width: 75%;
     }
@@ -191,14 +193,19 @@ h1 {
 
 
 @media screen and (min-width: 1024px) {
+    .wrapper {
+        margin-left: 80px;
+        margin-right: 80px;
+        margin-top: 0;
+    }
+
     #bottomHalf {
+        display:flex;
+        flex-direction: row-reverse;
         justify-content: space-around;
     }
     #prodRevBox {
         max-width: 400px;
     }
-    #recipeBox {
-        max-width: 450px;
 
-    }
 }
