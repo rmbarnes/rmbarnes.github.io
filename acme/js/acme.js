@@ -35,7 +35,9 @@ $(".pageNav").on("click", "a", function (evt) {
             $(".mainTitle").html(site);
             $("#name").html(data[site].name);
 
-            $("#productPic").attr("src", data[site].path);
+            console.log(data[site].path);
+            $("#productPic").empty("img");
+            $("#productPic").append("<img src='" + data[site].path + "'alt='product picture ' >");
 //            $("#productPic").attr("alt", "Picture of product");
 
 
@@ -44,6 +46,7 @@ $(".pageNav").on("click", "a", function (evt) {
             $("#price").html("Price: $" + data[site].price);
             $("#rev").html("Reviews: " + data[site].reviews + "/5 stars");
             $(".homeContent").css("display", "none");
+            $(".mainTitle").css("display", "none");
             $("#bottomHalf").css("display", "none");
 //            $("#productContent").css("display", "inline");
 

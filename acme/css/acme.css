@@ -61,18 +61,36 @@ body {
 }
 
 /*Home Content*/
+/*
 .homeContent {
     background-image: url(/acme/images/site/feature.jpg);
     background-size: 100%;
-    background-height: 100%;
     background-repeat: no-repeat;
     max-width: 100%;
     margin: 10px;
     display: flex;
     justify-content: flex-end;
 }
+*/
 
+.homeContent {
+    display: flex;
 
+}
+#heroFigure {
+   margin: 0;
+}
+#heroPic {
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+
+}
+
+#heroDescr {
+    width: 300px;
+
+}
 
 #heroDescr, #recipe {
     list-style: none;
@@ -94,7 +112,7 @@ body {
 
 #recipe li {
     width: 50%;
-    height: 100px;
+    height: 120px;
 
 
 }
@@ -102,10 +120,17 @@ body {
 /*Other pages*/
 #productContent {
     display: flex;
+    flex-direction: column;
 }
 
-#productPic {
-    max-width: 40%;
+#prodInfo {
+    display: flex;
+    justify-content: space-around;
+
+}
+
+#productPic img{
+    max-width: 150px;
 }
 
 
@@ -116,6 +141,7 @@ body {
 
 #details {
     width: 50%;
+
 
 }
 
@@ -153,8 +179,21 @@ h1 {
         flex-direction: row-reverse;
     }
 
+    #productPic img{
+        max-width: 100%;
+    }
+
 
 
 @media screen and (min-width: 1024px) {
+    #bottomHalf {
+        justify-content: space-around;
+    }
+    #prodRevBox {
+        max-width: 400px;
+    }
+    #recipeBox {
+        max-width: 450px;
 
+    }
 }
