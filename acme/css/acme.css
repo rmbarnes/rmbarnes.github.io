@@ -21,7 +21,7 @@ body {
     margin-top: 0;
     background-color: white;
 }
-#productContent {
+.hide {
     display: none;
 }
 
@@ -73,6 +73,10 @@ body {
 .homeContent {
     display: flex;
 
+}
+
+#actionbtn {
+    width: 75%;
 }
 
 h1, h2 {
@@ -129,7 +133,7 @@ h1, h2 {
     margin-left: 10px;
 }
 /*Other pages*/
-#productContent {
+#productContentBox {
     display: flex;
     flex-direction: column;
 
@@ -174,6 +178,10 @@ h1, h2 {
         font-size: 1em;
     }
 
+    #actionbtn {
+        width: auto;
+    }
+
     #recipeBox {
         width: 400px;
     }
@@ -194,9 +202,10 @@ h1, h2 {
 
 @media screen and (min-width: 1024px) {
     .wrapper {
-        margin-left: 80px;
-        margin-right: 80px;
+        max-width: 918px;
+        margin: auto;
         margin-top: 0;
+        margin-bottom: 0;
     }
 
     #bottomHalf {
